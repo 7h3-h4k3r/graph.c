@@ -5,17 +5,15 @@
 
 #include "../include/dict.h"
 
-typedef struct vertex{
-  dict *v;
-  node *next;
-}vertex;
+
 
 typedef struct graph
 {
-  vertex *v;
+  dict *keys;
+  struct graph *next;
   int (*addvertex)(struct graph *,int);
 }graph;
 
-int addvertax(graph,int);
+int addvertex(graph *g,int);
 
 #endif 

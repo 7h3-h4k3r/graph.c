@@ -1,17 +1,18 @@
 #include "../include/graph.h"
 #include<stdlib.h>
-int _addvertex(graph *g , int v){
-    graph *new_vertex = (graph*)malloc(sizeof(graph)); 
-    new_vertex->v = get_vertax()
-    if (new_vertex != NULL){
-        if(g->v != NULL){
-            
-        }
-    }
-    if (g->v)
+
+int _addvertex(graph **g , int v){
+    
 }
 
 void __init__graph__(graph *obj){
-    graph *g = obj;
-    g->addvertex = _addvertex;
+    graph *g;
+    g = (graph *)malloc(sizeof(graph));
+    if (g==NULL && g->keys == NULL){
+        printf("Memory allocation Failed %s",__func__);
+        return -1;
+    }
+    __init__(*g->keys);
+    g = obj;
+    g->addvertex  = _addvertex; 
 }
