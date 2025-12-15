@@ -10,7 +10,6 @@
 typedef struct graph
 {
   dict *keys;
-  struct graph *next;
   int (*addvertex)(struct graph *,int);
 }graph;
 

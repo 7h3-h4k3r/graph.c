@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 int _addvertex(graph **g , int v){
-    
+    printf("%d ",(*g)->keys->isIn((*g)->keys,v));
 }
 
 void __init__graph__(graph *obj){
